@@ -1,1 +1,34 @@
-spring.application.name=v1-cep
+spring:
+  application:
+    name: v1-cep
+
+  datasource:
+      url: jdbc:postgresql://postgres:5433/mydatabase
+      username: myuser
+      password: secret
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  servlet:
+    multipart:
+      enabled: true
+
+logging:
+  level:
+    root: info
+    org.springframework: debug
+
+server:
+  port: 8080
+
+api:
+  external:
+    base-url: http://wiremock:8080

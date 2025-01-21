@@ -1,4 +1,6 @@
 package com.nss.v1cep.infrastructure.persistence;
 
-public class ConsultaCepRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ConsultaCepRepository extends JpaRepository<ConsultaCepEntity, Long> {
 }
